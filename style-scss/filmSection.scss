@@ -1,29 +1,80 @@
 .filmSection{
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.374);
-    padding-top: 2rem;
+    background-color: black;
     display: flex;
     justify-content: center;
+    padding-top: 2rem;
+    
 
     .filmSectionscontainer{
-        width: 22rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+
+        .newFilmSection{
+            width: 100%;
+            height: auto;
+            position: relative;
+            padding:0 1rem;
+            overflow: hidden;
+            
+            .carouselButtons{
+                width: 100%;
+                display: flex;
+                position: absolute;
+                justify-content: space-between; 
+                align-items: center;            
+                padding:0 2rem;
+                top: 45%;
+                
+                >*{
+                    background-color: rgba(0, 0, 0, 0.291);
+                    padding: 10px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    font-size: 30px;
+                    cursor: pointer;
+                    transition: 300ms;
+
+                    &:hover{
+                        background-color: rgba(0, 0, 0, 0.822);
+                        
+                    }
+                    
+                }
+            }
+
+            p{
+                color: white;
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+
+           
+
+            .filmBar{
+                display: flex;
+
+                .cards{
+                    background-color: rgba(241, 240, 237, 0.549);
+                    min-width: 18rem ;
+                    min-height: 11rem; 
+                    margin-left: 2px;
+                }
+
+                
+            }
+
+            
+        }
 
         > *{
             margin-bottom: 2rem;
-        }
+        }    
 
-    }
-
-    p{
-        color: white;
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-
-    .cards{
-        background-color: rgba(241, 240, 237, 0.549);
-        width: 100%;
-        height: 12rem;    
-    }
+    }   
 
 }
