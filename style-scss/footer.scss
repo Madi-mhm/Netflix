@@ -19,7 +19,7 @@ footer{
             >*{
                 margin-right: 2rem;
                 font-size: 25px;
-
+                cursor: pointer;
             }
         }
 
@@ -41,6 +41,7 @@ footer{
             display: flex;
             justify-content: space-between;     
             margin-top: 3rem;  
+            cursor: pointer;
         }
 
         @media (min-width: 768px) {

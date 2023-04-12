@@ -32,15 +32,30 @@
                 outline: none;
                 padding: 10px 25px;
                 font-weight: bold;  
-                margin-left: 7px;              
+                margin-left: 7px;  
+                cursor: pointer;  
+                transition: 500ms ;
+                
+                &:hover{
+                    background-color: black;
+                    color: white;
+                }
             }
             #addToListButton{
                 background-color: rgba(255, 255, 255, 0.545);
                 color: rgba(255, 255, 255, 0.719);
                 opacity: 90%;
-            }
 
-           
+                &:hover{
+                    background-color: black;
+                }
+            }
+                      
         }
+
+        @media (min-width: 1024px) {
+            padding-left: 3rem;
+        }
+        
     }
 }
