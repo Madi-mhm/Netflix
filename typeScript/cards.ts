@@ -1,12 +1,12 @@
-import { newFilms } from "./filmSection"
+// import { newFilms } from "./filmSection"
 
 
-export function createCards(){
+// export function createCards(){
 
-    const newCard = document.createElement("div")
-    newCard.classList.add("cards")
-    newFilms.append(newCard);  
-}
+//     const newCard = document.createElement("div")
+//     newCard.classList.add("cards")
+//     newFilms.append(newCard);  
+// }
 
 
 

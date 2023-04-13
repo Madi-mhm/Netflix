@@ -1,80 +1,129 @@
-.filmSection{
-    width: 100%;
+:root {
+    --slider-padding: 3rem;
+}
+
+.filmSectionscontainer{
     background-color: black;
-    display: flex;
-    justify-content: center;
-    padding-top: 2rem;
+    padding: 2rem;
+
     
+    p{
+        color: white;
+        font-size: 18px;
+        margin: 5px 0;
+    }
 
-    .filmSectionscontainer{
-        width: 100%;
+    .newFilmSection{
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
 
 
-        .newFilmSection{
-            width: 100%;
-            height: auto;
-            position: relative;
-            padding:0 1rem;
-            overflow: hidden;
-            
-            .carouselButtons{
-                width: 100%;
-                display: flex;
-                position: absolute;
-                justify-content: space-between; 
-                align-items: center;            
-                padding:0 2rem;
-                top: 45%;
-                
-                >*{
-                    background-color: rgba(0, 0, 0, 0.291);
-                    padding: 10px;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    color: white;
-                    font-size: 30px;
-                    cursor: pointer;
-                    transition: 300ms;
-
-                    &:hover{
-                        background-color: rgba(0, 0, 0, 0.822);
-                        
-                    }
-                    
-                }
-            }
-
-            p{
-                color: white;
-                margin-bottom: 10px;
-                font-size: 18px;
-            }
-
-           
-
-            .filmBar{
-                display: flex;
-
-                .cards{
-                    background-color: rgba(241, 240, 237, 0.549);
-                    min-width: 18rem ;
-                    min-height: 11rem; 
-                    margin-left: 2px;
-                }
-
-                
-            }
-
-            
+        .slider{
+            --items-per-screen: 5;
+            --slider-index : 0; 
+            display: flex;
+            flex-grow: 1 ;
+            margin: 0 2px;
+            transform: translateX(calc(var(--slider-index) * -100%));
+            transition: transform 250ms ease-in-out; 
+        }
+    
+        .cards{
+            background-color: rgba(164, 125, 8, 0.696);                
+            max-width: 25%;
+            aspect-ratio: 16 / 9;
+            flex: 0 0 calc(100% / var(--items-per-screen));    
+            margin: 0 1px;
+            border-radius: 5px;
         }
 
-        > *{
-            margin-bottom: 2rem;
-        }    
+        .handel{
+            flex-grow: 0;
+            width: 2.5rem;
+            background-color: rgba(255, 0, 0, 0.183);
+            z-index: 10;
+            color: rgba(255, 255, 255, 0.336);
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+            transition: 250ms;     
+                  
 
-    }   
-
+            &:hover,
+            &:focus{
+                background-color: red;
+                font-size: 28px;
+                color: white;
+                
+            }
+        }
+ 
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .filmSection{
+//     width: 100%;
+//     background-color: black;
+//     display: flex;
+//     justify-content: center;
+//     padding-top: 2rem;
+    
+
+//     .filmSectionscontainer{
+//         width: 100%;
+//         display: flex;
+//         flex-direction: column;
+
+
+//         .newFilmSection{
+//             width: 100%;
+//             height: auto;
+//             position: relative;
+//             padding:0 1rem;
+//             overflow: hidden;
+                      
+
+//             p{
+//                 color: white;
+//                 margin-bottom: 10px;
+//                 font-size: 18px;
+//             }
+
+//             .slider{
+//                 display: flex;
+
+//                 .cards{
+//                     background-color: rgba(241, 240, 237, 0.549);
+//                     min-width: 18rem ;
+//                     min-height: 11rem; 
+//                     margin-left: 2px;
+//                 }
+
+                
+//             }
+
+            
+//         }
+
+//         > *{
+//             margin-bottom: 2rem;
+//         }    
+
+//     }   
+
+// }

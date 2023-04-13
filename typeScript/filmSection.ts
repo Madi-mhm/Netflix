@@ -1,22 +1,22 @@
 
-export let newFilms; 
+// export let newFilms; 
 
-export function createSection(sectionTitle: string){
-    const filmSectionscontainer = document.querySelector(".filmSectionscontainer")
+// export function createSection(sectionTitle: string){
+//     const filmSectionscontainer = document.querySelector(".filmSectionscontainer")
 
-    const filmSection = document.createElement("div")
-    filmSection.classList.add("newFilmSection")
-    filmSectionscontainer?.append(filmSection)
+//     const filmSection = document.createElement("div")
+//     filmSection.classList.add("newFilmSection")
+//     filmSectionscontainer?.append(filmSection)
 
-    // Create the title of the new section 
-    const sectionType = document.createElement("p")
-    sectionType.innerText = sectionTitle
-    filmSection?.append(sectionType)
+//     // Create the title of the new section 
+//     const sectionType = document.createElement("p")
+//     sectionType.innerText = sectionTitle
+//     filmSection?.append(sectionType)
 
 
-    newFilms = document.createElement("div")
-    newFilms.classList.add("filmBar")
-    filmSection.append(newFilms)
+//     newFilms = document.createElement("div")
+//     newFilms.classList.add("filmBar")
+//     filmSection.append(newFilms)
 
 }
 
