@@ -1,12 +1,11 @@
-// import { newFilms } from "./filmSection"
 
+export function createCards(){
+    const sliderElement = document.querySelector(".slider")
 
-// export function createCards(){
-
-//     const newCard = document.createElement("div")
-//     newCard.classList.add("cards")
-//     newFilms.append(newCard);  
-// }
+    const card = document.createElement("div")
+    card.classList.add("cards")
+    sliderElement?.append(card)
+}
 
 
 

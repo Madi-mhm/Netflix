@@ -1,58 +1,60 @@
-
-// export let newFilms; 
-
-// export function createSection(sectionTitle: string){
-//     const filmSectionscontainer = document.querySelector(".filmSectionscontainer")
-
-//     const filmSection = document.createElement("div")
-//     filmSection.classList.add("newFilmSection")
-//     filmSectionscontainer?.append(filmSection)
-
-//     // Create the title of the new section 
-//     const sectionType = document.createElement("p")
-//     sectionType.innerText = sectionTitle
-//     filmSection?.append(sectionType)
+import { createCards } from "./cards"
 
 
-//     newFilms = document.createElement("div")
-//     newFilms.classList.add("filmBar")
-//     filmSection.append(newFilms)
+export let sliderDiv:HTMLElement;
+
+export function createFilmSection(type: string){
+
+    const filmSectionContainer = document.querySelector(".filmSectionscontainer")
+    const sectionContainer = document.createElement("div")
+
+    if(filmSectionContainer != null){
+        filmSectionContainer.append(sectionContainer)
+    }
+
+    // create Title for section
+    const filmSectionTitle = document.createElement("p")
+    filmSectionTitle.innerText = type
+    sectionContainer.append(filmSectionTitle)
+
+    // the new film section that includ buttons and slider
+    const newFilmSection = document.createElement("div")
+    newFilmSection.classList.add("newFilmSection")
+    sectionContainer.append(newFilmSection)
+
+    // left Button for film section
+    const leftButtonElement = document.createElement("button")
+    leftButtonElement.classList.add("handel")
+    leftButtonElement.classList.add("leftButton")
+    newFilmSection.append(leftButtonElement)
+
+    // Left arrow icon for leftButton
+    const leftArrowIcon = document.createElement("i")
+    leftArrowIcon.classList.add("fa-solid")
+    leftArrowIcon.classList.add("fa-arrow-left")
+    leftButtonElement.append(leftArrowIcon)
+
+    // Slider div that hold all cards
+    const sliderDiv = document.createElement("div")
+    sliderDiv.classList.add("slider")
+    newFilmSection.append(sliderDiv)
+
+
+    // Right button for film section 
+    const rightButtonElement = document.createElement("button")
+    rightButtonElement.classList.add("handel")
+    rightButtonElement.classList.add("rightButton")
+    newFilmSection.append(rightButtonElement)
+
+    // Right arrow icon for rightButton
+    const rightArrowIcon = document.createElement("i")
+    rightArrowIcon.classList.add("fa-solid")
+    rightArrowIcon.classList.add("fa-arrow-right")
+    rightButtonElement.append(rightArrowIcon)
+
+      
+    
 
 }
 
-// <!-- <div class="newFilmSection">
-//                         <p>Trending</p>
-//                         <div class="filmBar">
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                         </div>
-//                     </div>
-//                     <div>
-//                         <p>Popular</p>
-//                         <div class="filmBar">
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                         </div>
-//                     </div>
-//                     <div class="action">
-//                         <p>Action</p>
-//                         <div class="filmBar">
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                         </div>
-//                     </div>
-//                     <div class="aeries">
-//                         <p>Series</p>
-//                         <div class="filmBar">
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                             <div class="cards"></div>
-//                         </div>
-//                     </div> -->
+
