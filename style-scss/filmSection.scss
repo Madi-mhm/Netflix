@@ -9,54 +9,95 @@
     
     p{
         color: white;
-        font-size: 18px;
-        margin: 5px 0;
+        font-size: 10px;
+        margin-left: 2.5rem;
+
+        @media (min-width: 350px) {
+            font-size: 13px;
+        }
+        @media (min-width: 500px) {
+            font-size: 16px;
+        }
+        @media (min-width : 768px) {
+            font-size: 19px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 22px;
+        }
     }
 
     .newFilmSection{
         display: flex;
         justify-content: center;
         overflow: hidden;
+        cursor: pointer;
 
 
         .slider{
-            --items-per-screen: 5;
+            --items-per-screen: 1;
             --slider-index : 0; 
             display: flex;
             flex-grow: 1 ;
-            margin: 0 2px;
             transform: translateX(calc(var(--slider-index) * -100%));
-            transition: transform 250ms ease-in-out; 
+            transition: transform 600ms ease-in-out; 
+
+            
+            @media (min-width: 350px) {
+                --items-per-screen: 2;
+            }
+            @media (min-width: 500px) {
+                --items-per-screen: 3;
+            }
+            @media (min-width : 768px) {
+                --items-per-screen: 4;
+            }
+            @media (min-width: 1024px) {
+                --items-per-screen: 5;
+            }
+            @media (min-width: 1200px) {
+                --items-per-screen: 7;
+            }
+
+        }
+
+        &:hover{ 
+            .handel{
+                color: white;
+                font-size: 20px;
+                @media (min-height: 650px) {
+                    font-size: 30px;
+                    
+                }
+            }
         }
     
         .cards{
             background-color: rgba(164, 125, 8, 0.696);                
-            max-width: 25%;
             aspect-ratio: 16 / 9;
             flex: 0 0 calc(100% / var(--items-per-screen));    
-            margin: 0 1px;
             border-radius: 5px;
         }
 
         .handel{
             flex-grow: 0;
             width: 2.5rem;
-            background-color: rgba(255, 0, 0, 0.183);
+            background-color: black;
             z-index: 10;
             color: rgba(255, 255, 255, 0.336);
-            font-size: 24px;
             border: none;
             cursor: pointer;
             transition: 250ms;     
                   
-
-            &:hover,
-            &:focus{
-                background-color: red;
-                font-size: 28px;
-                color: white;
-                
+            @media (min-width: 350px) {
+                font-size: 18px;
             }
+            @media (min-width : 768px) {
+                font-size: 22px;
+            }
+            @media (min-width: 1200px) {
+                font-size: 24px;
+            }
+           
         }
  
     }
