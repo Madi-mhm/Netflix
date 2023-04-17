@@ -5,23 +5,29 @@
     display: flex;
     align-items: center;
     padding-left: 2rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     .homeSectionContents{
         
 
         #filmType{
             margin-bottom: 4rem;
-            font-size: 35px;
+            font-size: 30px;
+            color: white;
 
             span{
                 color: red;
                 font-weight: 900;
-            }
+                font-size: 35px;
+           }
         }
 
         #heroBannerName{
             margin: 4rem 0;
             font-size: 55px;
+            color: white;
         }
         
         .homeSectionButtons{
