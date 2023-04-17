@@ -3,7 +3,7 @@ import { createCards } from "./cards"
 
 export let sliderDiv:HTMLElement;
 
-export function createFilmSection(type: string){
+export function createFilmSection(type: string, sliderNewId){
 
     const filmSectionContainer = document.querySelector(".filmSectionscontainer")
     const sectionContainer = document.createElement("div")
@@ -37,6 +37,7 @@ export function createFilmSection(type: string){
     // Slider div that hold all cards
     const sliderDiv = document.createElement("div")
     sliderDiv.classList.add("slider")
+    sliderDiv.setAttribute("id", sliderNewId)
     newFilmSection.append(sliderDiv)
 
 

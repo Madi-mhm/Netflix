@@ -5,7 +5,7 @@
 .filmSectionscontainer{
     background-color: black;
     padding: 2rem;
-
+    
     
     p{
         color: white;
@@ -43,19 +43,19 @@
 
             
             @media (min-width: 350px) {
-                --items-per-screen: 2;
+                --items-per-screen: 1;
             }
             @media (min-width: 500px) {
-                --items-per-screen: 3;
+                --items-per-screen: 2;
             }
             @media (min-width : 768px) {
-                --items-per-screen: 4;
+                --items-per-screen: 3;
             }
             @media (min-width: 1024px) {
-                --items-per-screen: 5;
+                --items-per-screen: 4;
             }
             @media (min-width: 1200px) {
-                --items-per-screen: 7;
+                --items-per-screen: 5;
             }
 
         }
@@ -76,6 +76,9 @@
             aspect-ratio: 16 / 9;
             flex: 0 0 calc(100% / var(--items-per-screen));    
             border-radius: 5px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
            
         }
 
@@ -114,58 +117,3 @@
 
 
 
-
-
-
-
-// .filmSection{
-//     width: 100%;
-//     background-color: black;
-//     display: flex;
-//     justify-content: center;
-//     padding-top: 2rem;
-    
-
-//     .filmSectionscontainer{
-//         width: 100%;
-//         display: flex;
-//         flex-direction: column;
-
-
-//         .newFilmSection{
-//             width: 100%;
-//             height: auto;
-//             position: relative;
-//             padding:0 1rem;
-//             overflow: hidden;
-                      
-
-//             p{
-//                 color: white;
-//                 margin-bottom: 10px;
-//                 font-size: 18px;
-//             }
-
-//             .slider{
-//                 display: flex;
-
-//                 .cards{
-//                     background-color: rgba(241, 240, 237, 0.549);
-//                     min-width: 18rem ;
-//                     min-height: 11rem; 
-//                     margin-left: 2px;
-//                 }
-
-                
-//             }
-
-            
-//         }
-
-//         > *{
-//             margin-bottom: 2rem;
-//         }    
-
-//     }   
-
-// }

@@ -1,22 +1,27 @@
 import { createCards } from "./cards"
 import { createFilmSection } from "./filmSection"
+import { myKey } from "./dataKey"
 
+export const baseImgULR = "https://image.tmdb.org/t/p/original"
 
-const myKey = "6d5b82f3d63757edb75a5ba63fb2990c"
 
 export async function trendingMovieAPI(){
     try{
-        // const response = await fetch(`${baseULR}/3/trending/movie/day?api_key=${myKey}`)
         const response = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${myKey}`)
         const dataFromApi = await response.json()
         const data = dataFromApi.results
         
 
-        createFilmSection('Trending')
+
+        createFilmSection('Trending', "trendingSectionSlider")
 
 
         for (let i = 0; i < data.length; i++) {
-            createCards()
+
+            const getBackgroundImg = data[i].backdrop_path
+            createCards(`${baseImgULR}${getBackgroundImg}`)
+            
+
         }     
 
 
