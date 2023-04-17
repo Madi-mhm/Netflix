@@ -11,7 +11,7 @@ export async function popularMovieAPI() {
         const data = dataFromApi.results
         
 
-        createFilmSection("Popular", "popularSectionSlider")
+        createFilmSection("Popular", "popularSectionSlider", "popularButtons")
 
         for (let i = 0; i < data.length; i++) {
             

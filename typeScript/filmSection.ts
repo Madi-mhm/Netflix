@@ -3,7 +3,7 @@ import { createCards } from "./cards"
 
 export let sliderDiv:HTMLElement;
 
-export function createFilmSection(type: string, sliderNewId){
+export function createFilmSection(type: string, sliderNewId, newButtonClass){
 
     const filmSectionContainer = document.querySelector(".filmSectionscontainer")
     const sectionContainer = document.createElement("div")
@@ -26,6 +26,7 @@ export function createFilmSection(type: string, sliderNewId){
     const leftButtonElement = document.createElement("button")
     leftButtonElement.classList.add("handel")
     leftButtonElement.classList.add("leftButton")
+    leftButtonElement.classList.add(newButtonClass)
     newFilmSection.append(leftButtonElement)
 
     // Left arrow icon for leftButton
@@ -45,6 +46,7 @@ export function createFilmSection(type: string, sliderNewId){
     const rightButtonElement = document.createElement("button")
     rightButtonElement.classList.add("handel")
     rightButtonElement.classList.add("rightButton")
+    rightButtonElement.classList.add(newButtonClass)
     newFilmSection.append(rightButtonElement)
 
     // Right arrow icon for rightButton

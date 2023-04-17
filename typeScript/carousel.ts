@@ -12,16 +12,26 @@ export function carouselHandle(){
             handel = element.closest(".handel");
           };
     
-          if(handel != null){
+          if(handel != null){           
             onHandelClick(handel);
             }
         }
-      });
+    });
       
     
-      function onHandelClick(handel: Element): void {
-        const slider = document.querySelector(".slider") as HTMLElement
-        const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"));
+      function onHandelClick(handel: Element): void {         
+          
+          if(handel.classList.contains("trendingButtons")){
+            test(document.querySelector("#trendingSectionSlider"))
+          }else{
+            test(document.querySelector("#popularSectionSlider"))
+
+          }      
+
+        
+            
+        function test(slider){
+          const sliderIndex = parseInt(getComputedStyle(slider).getPropertyValue("--slider-index"));
       
     
         // Getting the number of cards and pages for stoping the handel click 
@@ -52,7 +62,7 @@ export function carouselHandle(){
             slider?.style.setProperty("--slider-index", String(sliderIndex - 1));
           }
         }
-      
+        }
         
       }
       

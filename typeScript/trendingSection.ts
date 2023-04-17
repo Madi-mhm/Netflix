@@ -13,7 +13,7 @@ export async function trendingMovieAPI(){
         
 
 
-        createFilmSection('Trending', "trendingSectionSlider")
+        createFilmSection('Trending', "trendingSectionSlider", "trendingButtons")
 
 
         for (let i = 0; i < data.length; i++) {
