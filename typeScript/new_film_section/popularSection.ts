@@ -1,6 +1,6 @@
-import { myKey } from "./dataKey";
-import { createFilmSection } from "./filmSection";
-import { createCards } from "./cards";
+import { myKey } from "../dataKey";
+import { createFilmSection } from "../filmSection";
+import { createCards } from "../cards";
 import { baseImgULR } from "./trendingSection";
 
 export async function popularMovieAPI() {
@@ -14,12 +14,15 @@ export async function popularMovieAPI() {
         createFilmSection("Popular", "popularSectionSlider", "popularButtons")
 
         for (let i = 0; i < data.length; i++) {
-            
+
+            // const getId = data[i].id
+            const getDescription = data[i].overview
             const getBackgroundImg = data[i].backdrop_path
-            createCards(`${baseImgULR}${getBackgroundImg}`)
+            const getName = data[i].title
+
+            createCards(`${baseImgULR}${getBackgroundImg}`, getName, getDescription)
            
         }
-        
 
     } catch (error) {
         console.log("error");

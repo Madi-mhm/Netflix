@@ -1,12 +1,17 @@
+import { createPopUp } from "./popUp";
 
-export function createCards(backgroundImg){
+export function createCards(backgroundImg, movieTitle, movieDescription){
 
-    const sliderElement = document.querySelectorAll(".slider") 
+    const sliderElement = document.querySelectorAll(".slider")
 
     const card = document.createElement("div")
     card.classList.add("cards")
     card.style.backgroundImage = `url(${backgroundImg})`;
 
+    card.addEventListener("click",()=>{
+        createPopUp(backgroundImg, movieTitle)        
+                        
+    })
     for (let i = 0; i < sliderElement.length; i++) {
         if(sliderElement[i].contains(document.getElementById("trendingSectionSlider"))){
 

@@ -1,11 +1,10 @@
 import { myKey } from "./dataKey";
-import { baseImgULR } from "./trendingSection";
+import { baseImgULR } from "./new_film_section/trendingSection";
 
 export async function heroBanner(){
 
     try{
-
-        const response = await fetch (`https://api.themoviedb.org/3/movie/popular?api_key=${myKey}&language=en-US&page=1`)
+        const response = await fetch (`https://api.themoviedb.org/3/trending/all/day?api_key=${myKey}`)
         const newRespose = await response.json()
         const data = newRespose.results        
 

@@ -1,6 +1,3 @@
-import { createCards } from "./cards"
-
-
 export let sliderDiv:HTMLElement;
 
 export function createFilmSection(type: string, sliderNewId, newButtonClass){
@@ -54,9 +51,6 @@ export function createFilmSection(type: string, sliderNewId, newButtonClass){
     rightArrowIcon.classList.add("fa-solid")
     rightArrowIcon.classList.add("fa-arrow-right")
     rightButtonElement.append(rightArrowIcon)
-
-      
-    
 
 }
 
