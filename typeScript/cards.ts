@@ -1,3 +1,4 @@
+import { forEachChild } from "typescript";
 import { createPopUp } from "./popUp";
 
 export function createCards(backgroundImg, movieTitle, movieDescription){
@@ -9,9 +10,35 @@ export function createCards(backgroundImg, movieTitle, movieDescription){
     card.style.backgroundImage = `url(${backgroundImg})`;
 
     card.addEventListener("click",()=>{
-        createPopUp(backgroundImg, movieTitle)        
-                        
+
+        const popUpContainer = document.querySelector(".popUpContainer")
+        
+
+        if(popUpContainer != null){
+            popUpContainer.remove()
+            createPopUp(backgroundImg, movieTitle, movieDescription)
+            console.log(popUpContainer);
+                    
+        }else if(popUpContainer == null){
+            createPopUp(backgroundImg, movieTitle, movieDescription)  
+                  
+            console.log(popUpContainer);
+            
+        }
+    
+        
+       
+
+
+
+
+
+    //    createPopUp(backgroundImg, movieTitle, movieDescription)        
+
+        
     })
+
+
     for (let i = 0; i < sliderElement.length; i++) {
         if(sliderElement[i].contains(document.getElementById("trendingSectionSlider"))){
 

@@ -11,28 +11,67 @@
     background-position: center;
     background-repeat: no-repeat;
     border:  solid 3px white;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.28);
 
+    
     @media (min-width: 1024px) {
-        width: 80%;
+        width: 70%;
         height: 90%;
-        margin: 5% 10% 5% 8%;
+        margin: 5% 15%;
         
     }
     @media (min-width: 1200px) {
-        width: 80%;
+        width: 60%;
         height: 100%;
-        margin: 0 10%;
+        margin: 0 20%;
     }
 
-    .filmTitleDiv{
+    .insideContainer{
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.587);
+        box-shadow: 0 -15px 30px  rgba(255, 255, 255, 0.193);
         
-        .filmTitle{
-            color: white;
-            font-size: 25px;
+        
+
+        .filmTitleDiv{
             
+        
+            .filmTitle{
+                color: white;
+                font-size: 16px;
+                margin-bottom: 1rem;
+                margin: 0;
+                padding: 0.5rem 1rem;
+                font-weight: 600;
+                text-shadow: 5px 5px 5px black;
+            }
+        
         }
-    
+
+        .filmDescriptionDiv{
+            .filmDescription{
+                margin: 0;
+                font-size: 12px;
+                padding:0 1rem 1rem 1rem;
+                text-shadow: 5px 5px 5px black;
+            }
+        }
     }
 
+    .popUpCancelButtonDiv{
+        color: white;
+        font-size: 18px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 5px 10px;
+        cursor: pointer;
+        transition: 250ms;
+        &:hover{
+            font-size: 20px;
+        }   
+    }
 }
