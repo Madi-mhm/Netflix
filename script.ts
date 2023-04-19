@@ -12,3 +12,5 @@ import { heroBanner } from "./typeScript/heroBanner";
 heroBanner()
 
 
+import { searchInput } from "./typeScript/SearchInput";
+searchInput()

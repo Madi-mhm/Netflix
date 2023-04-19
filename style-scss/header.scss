@@ -22,9 +22,32 @@
         padding-right: 2rem;
         font-size: 25px;
 
+        .hamburgerBar{
+            color: white;
+            font-size: 35px;
+        }
+
         .searchIcon{
             display: none;
             cursor: pointer;
+            
+            
+                    
+            #searchInput{
+                width: 15rem;
+                height: 2rem;
+                border: 1px solid rgb(255, 255, 255) ;
+                background-color: rgb(0, 0, 0);
+                color: white;
+                border-radius: 1px;
+                position: absolute;
+                top: 1rem;
+                right : 15rem;
+                outline: none;
+                padding: 0 10px;
+                font-size: 15px;
+                font-family: 'PT Serif', serif;
+            }
         }
 
         .notificationIcon{
@@ -51,6 +74,7 @@
 
         .headerNavbarLinks{
             display: unset;
+            
             ul{  
             display: flex;
             color: white;
@@ -81,6 +105,11 @@
             
             .searchIcon{
                 display: unset;
+                
+                #searchInput{
+                    right: 10.5rem;
+                }
+                
             }
 
             .notificationIcon{
@@ -111,6 +140,13 @@
 
         .headerNavbar{
             margin-left: auto;
+
+            .searchIcon{
+
+                #searchInput{
+                    right: 13.5rem;
+                }
+            }
         }
     }
 }

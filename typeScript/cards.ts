@@ -25,13 +25,6 @@ export function createCards(backgroundImg, movieTitle, movieDescription){
             console.log(popUpContainer);
             
         }
-    
-        
-       
-
-
-
-
 
     })
 
