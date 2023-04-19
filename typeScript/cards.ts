@@ -33,9 +33,6 @@ export function createCards(backgroundImg, movieTitle, movieDescription){
 
 
 
-    //    createPopUp(backgroundImg, movieTitle, movieDescription)        
-
-        
     })
 
 
