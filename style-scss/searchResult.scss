@@ -26,10 +26,9 @@
         .searchResultMoviesCard{
             width: 11rem;
             height: 15rem;
-            // background-color: rgba(255, 255, 255, 0.221);
             background-size: cover;
             background-position: center;
-            
+            cursor: pointer;
             
         }
     }
@@ -69,7 +68,5 @@
             
         }
     }
-
-
 }
 

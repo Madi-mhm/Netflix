@@ -1,6 +1,5 @@
-
-
 import { myKey } from "./dataKey"
+import { baseImgULR } from "./new_film_section/trendingSection"
 
 export function searchInput(){
 
@@ -111,9 +110,8 @@ export function searchInput(){
             }
 
             // Search Display buttons for navigate between pages 
-            function searchDisplayButtons(totalPages , currentPage){
-
-                const searchResultSection = document.querySelector(".searchResultSection")
+            function searchDisplayButtons(totalPageNumber , currentPageNumber){
+              const searchResultSection = document.querySelector(".searchResultSection")
                 const pageButtonsContainer = document.createElement("div")
                 searchResultSection?.append(pageButtonsContainer)
                 pageButtonsContainer.classList.add("pageButtonsContainer")                
@@ -124,7 +122,7 @@ export function searchInput(){
                 pageButtonsContainer.append(leftButton)
 
                 const pageActuelleNumber = document.createElement("p")
-                pageActuelleNumber.innerText = `${currentPage} / ${totalPages}`
+                pageActuelleNumber.innerText = `${currentPageNumber} / ${totalPageNumber}`
                 pageActuelleNumber.classList.add("pageActuelleNumber")
                 pageButtonsContainer.append(pageActuelleNumber)
 
@@ -134,28 +132,28 @@ export function searchInput(){
                 pageButtonsContainer.append(rightButton)
                 
                 rightButton.addEventListener("click", ()=>{
-                    if(currentPage < totalPages){
+                    if(currentPageNumber < totalPageNumber){
                         currentPageNumber += 1
                         createSearchResultatCards(currentPageNumber, 10)
-                        pageActuelleNumber.innerText = `${currentPageNumber} / ${totalPages}`
+                        pageActuelleNumber.innerText = `${currentPageNumber} / ${totalPageNumber}`
                         
-                    }else{
-                        console.log("not more page");
                     }
                 })
+
                 leftButton.addEventListener("click", ()=>{
-                    if(currentPage < 1){
-                        currentPageNumber -= 1
+                    if(currentPageNumber !< 1){
+                        currentPageNumber = currentPageNumber - 1
                         createSearchResultatCards(currentPageNumber, 10)
-                        pageActuelleNumber.innerText = `${currentPageNumber} / ${totalPages}`
-                    }else{
-                        console.log("not more page");
+                        pageActuelleNumber.innerText = `${currentPageNumber} / ${totalPageNumber}`
+                    
                         
                     }
                 })    
             }
-            createSearchResultatCards( currentPageNumber ,10)
+            createSearchResultatCards(currentPageNumber ,10)
             searchDisplayButtons(totalPageNumber, currentPageNumber)
+           
+
             
             
         } catch (error) {}
