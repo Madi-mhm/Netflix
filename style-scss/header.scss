@@ -46,13 +46,14 @@
                 padding: 0 10px;
                 font-size: 15px;
                 font-family: 'PT Serif', serif;
+                border-right: none;
             }
             .searchInputButton{
                 position: absolute;
                 height: 2rem;
                 top: 1rem;
                 right : 10rem;
-                background-color: #00000081;
+                background-color: black;
                 color: white;
                 border: 0.5px solid rgb(255, 255, 255) ;
                 cursor: pointer;

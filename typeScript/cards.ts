@@ -1,4 +1,3 @@
-import { forEachChild } from "typescript";
 import { createPopUp } from "./popUp";
 
 export function createCards(backgroundImg, movieTitle, movieDescription){

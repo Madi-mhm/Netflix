@@ -74,15 +74,13 @@
                 }
             }
         
-            .cards{
-                background-color: rgba(164, 125, 8, 0.696);                
+            .cards{               
                 aspect-ratio: 16 / 9;
                 flex: 0 0 calc(100% / var(--items-per-screen));    
                 border-radius: 5px;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-               
             }
     
             .handel{
