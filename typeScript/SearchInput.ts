@@ -9,20 +9,25 @@ export function searchInput(){
     const searchInputButton: HTMLElement | null = document.querySelector(".searchInputButton")
     
     // Disply the search input and hide the navbar links
-    searchIcon?.addEventListener("click",()=>{
-
+        searchIcon?.addEventListener("click",()=>{
         searchInput?.classList.remove("hide")
         searchInputButton?.classList.remove("hide")
         searchIcon.classList.add("hide")
         headerNavbarLinks.forEach(element => {
-            element.classList.add("hide")
+        element.classList.add("hide")
         });
-    })
+        })
+    
+
+
 
     // Search by search button
     searchInputButton?.addEventListener("click",searchFunction)
     
     async function searchFunction(){
+        const searchResultSection = document.querySelector(".searchResultSection")
+        searchResultSection?.remove()
+        
         try {
             const searchValue =  searchInput.value.trim()
 
@@ -34,13 +39,32 @@ export function searchInput(){
             const filmSectionscontainer = document.querySelector(".filmSectionscontainer")
             const headerContainer = document.querySelector(".headerContainer") as HTMLElement
 
-            homeSection?.classList.add("hide")
-            filmSectionscontainer?.classList.add("hide")
-            headerContainer.classList.add("searchResultatPageNavBar")
             
             
+            // Oraganisation of search value 
+            // You have to write a valid value otherwise it execute the following code
+            if(data != ""){
+                homeSection?.classList.add("hide")
+                filmSectionscontainer?.classList.add("hide")
+                headerContainer.classList.add("searchResultatPageNavBar")
+                displayFunction()                
+
+            }else{
+                
+                if(homeSection?.classList.contains("hide") || filmSectionscontainer?.classList.contains("hide") || headerContainer?.classList.contains("searchResultatPageNavBar") ){
+
+                    homeSection?.classList.remove("hide")
+                    filmSectionscontainer?.classList.remove("hide")
+                    headerContainer.classList.remove("searchResultatPageNavBar")
+                }else{
+                    alert("don't fk with me")
+                }
+            }
+                   
+                
 
 
+            // Create a page for the search resultal
             function displayFunction(){
                 const filmSection = document.querySelector(".filmSection")
 
@@ -56,9 +80,9 @@ export function searchInput(){
                 
 
             }  
-            displayFunction()  
-             
             
+             
+            // Create a card and inject the data from the api for each data it has
             function createSearchResultatCards(){
                 const searchResultContainer = document.querySelector(".searchResultContainer")
 

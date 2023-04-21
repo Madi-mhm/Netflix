@@ -14,3 +14,10 @@ heroBanner()
 
 import { searchInput } from "./typeScript/SearchInput";
 searchInput()
+
+
+
+const netflixLogo = document.querySelector(".headerLogo")
+netflixLogo?.addEventListener("click",()=>{
+    location.reload()
+})
