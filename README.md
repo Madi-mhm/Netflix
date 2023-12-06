@@ -12,6 +12,14 @@
 - Create a file in typeScript folder and name it "dataKey.ts" 
 - inside your file dataKey.ts create a constant =>  export myKey = "MyKey"
 
+1. install parcel 
+``` 
+npm install --save-dev parcel
+```
+2. Run with parcel
+```
+npx parcel src/index.html
+```
 
 #### important links
 
